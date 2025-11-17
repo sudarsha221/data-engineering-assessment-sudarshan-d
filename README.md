@@ -53,10 +53,10 @@ SOURCE path/to/schema.sql;
 Updated ETL script to connect to local MySQL at localhost:3306.
 
 # How to Reproduce
-Install MySQL 8.0 locally
+# 1.Install MySQL 8.0 locally
 Download MySQL Installer → Install MySQL Server & Workbench → Set root password.
 
-Create database and user
+# 2.Create database and user
 Run these commands in MySQL:
 
 CREATE DATABASE home_db;
@@ -68,26 +68,26 @@ GRANT ALL PRIVILEGES ON home_db.* TO 'db_user'@'localhost';
 FLUSH PRIVILEGES;
 
 
-Import the provided schema
+# Import the provided schema
 Open MySQL shell and run:
 
-USE home_db;
+# USE home_db;
 SOURCE E:/data_engineer_assessment/schema.sql;
 
 
-Install Python dependencies
+# Install Python dependencies
 In your project folder:
 
 pip install -r requirements.txt
 
 
-Run the ETL script
+# Run the ETL script
 Execute the ETL:
 
 python src/etl.py
 
 
-Verify loaded data
+# Verify loaded data
 In MySQL:
 
 USE home_db;
