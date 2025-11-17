@@ -60,8 +60,11 @@ Create database and user
 Run these commands in MySQL:
 
 CREATE DATABASE home_db;
+
 CREATE USER 'db_user'@'localhost' IDENTIFIED BY '6equj5_db_user';
+
 GRANT ALL PRIVILEGES ON home_db.* TO 'db_user'@'localhost';
+
 FLUSH PRIVILEGES;
 
 
